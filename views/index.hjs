@@ -7,7 +7,28 @@
     <script src="javascript/test.js"></script>
   </head>
   <body>
-    <h1>{{ title }}</h1>
-    <p>Welcome to {{ title }}</p>
+
+
+    <div id="main"></div>
+
+
+
   </body>
+
+  <style>
+    #main {
+      margin: 0 auto;
+      border: 1px black solid;
+      width: 500px;
+      height: 500px;
+    }
+
+  </style>
+
+
+  <script>
+    setup();
+  </script>
+
+
 </html>
