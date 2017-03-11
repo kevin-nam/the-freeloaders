@@ -85,3 +85,16 @@ function gameFloor() {
 		rect(0, 350, 1000, 300);
 	}
 }
+
+function isOdd(num) {
+	return num % 2;
+}
+
+function move() {
+	if(isOdd(floor(radians(frameCount*2)))) {
+		rotate(radians(moves++));
+	}
+	else {
+		rotate(radians(moves--));
+	}
+}
