@@ -1,7 +1,3 @@
-var monsters = [];
-
-var mushroom;
-
 function Monster(speed, x, y, img) {
 	this.speed = speed;
 	this.x = x;
@@ -11,45 +7,23 @@ function Monster(speed, x, y, img) {
 	this.img = img;
 
 	this.load = function() {
-		rect(this.x, this.y, this.width, this.height);
-		image(this.img, this.x, this.y, this.width, this.height);
+		image(this.img, this.x - (this.width), this.y, this.width, this.height);
 	}
 
 	this.update = function() {
 			this.width = this.width + this.speed;
 			this.height = this.height + this.speed;
-			console.log(this.width);
 	}
 
-	this.getHitbox = function() {
-
+	this.isHit = function(x, y, z) {
+		console.log("z of monster = " + (250 - this.height));
+		console.log("arrow z = " + z);
+		if ((z <= 250 - this.height + 10 && z >= 250 - this.height - 10) &&
+			(x <= this.x + this.width && x >= this.x) &&
+			(y <= this.y + this.width && y >= this.y )) {
+				return true;
+			} else {
+				return false;
+			}
 	}
-}
-
-function setup() {
-	createCanvas(600, 600);
-	background(100);
-	mushroom = loadImage("/images/kingslime.gif");
-}
-
-function draw() {
-	background(100);
-
-	if (monsters.length < 3) {
-		monster = new Monster(random(0,2), 150, random(0,300), mushroom);
-		console.log(monster);
-		monsters.push(monster);
-	}
-
-	for (var i = 0; i < monsters.length; i++) {
-		console.log(monsters[i].width);
-		if (monsters[i].width > 300) {
-			console.log('deleting');
-			monsters.splice(i, 1);
-		} else {
-			monsters[i].load();
-			monsters[i].update();
-		}
-	}
-
 }

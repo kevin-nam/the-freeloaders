@@ -4,6 +4,8 @@ function Arrow(x,y) {
 	// var posX = x;
 	// var posY = y;
 
+	this.z = 0;
+
 	this.mass = 10;
 	this.position = createVector(x,y);
 	this.velocity = createVector(0,0);
@@ -28,6 +30,8 @@ function Arrow(x,y) {
 			this.position.add(this.velocity);
 			// We must clear acceleration each frame
 			this.acceleration.mult(0);
+			this.z = this.z + this.velocity.y;
+
 	}
 
 	this.updateStopped = function() {
