@@ -2,7 +2,6 @@
 <html>
   <head>
     <title>{{ title }}</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
     <script src="javascript/p5.js"></script>
     <script src="javascript/Arrow.js"></script>
     <script src="javascript/main.js"></script>
@@ -10,12 +9,6 @@
   <body>
 
 
-    
-
-
-
 </body>
-
-
 
 </html>
