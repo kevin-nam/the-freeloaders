@@ -2,33 +2,13 @@
 <html>
   <head>
     <title>{{ title }}</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
     <script src="javascript/p5.js"></script>
     <script src="javascript/test.js"></script>
   </head>
   <body>
 
 
-    <div id="main"></div>
-
-
 
   </body>
-
-  <style>
-    #main {
-      margin: 0 auto;
-      border: 1px black solid;
-      width: 500px;
-      height: 500px;
-    }
-
-  </style>
-
-
-  <script>
-    setup();
-  </script>
-
 
 </html>
