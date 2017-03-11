@@ -11,6 +11,7 @@ function Monster(speed, x, y, img) {
 	this.img = img;
 
 	this.load = function() {
+		rect(this.x, this.y, this.width, this.height);
 		image(this.img, this.x, this.y, this.width, this.height);
 	}
 
@@ -18,6 +19,10 @@ function Monster(speed, x, y, img) {
 			this.width = this.width + this.speed;
 			this.height = this.height + this.speed;
 			console.log(this.width);
+	}
+
+	this.getHitbox = function() {
+
 	}
 }
 
